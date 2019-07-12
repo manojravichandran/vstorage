@@ -1,12 +1,13 @@
-const express=require('express');
-const bodyparser=require('body-parser');
-const path=require('path');
+const express=require('express');  //adding express package to file..we ll never change so it's const
+const bodyparser=require('body-parser'); //adding this body-parser to route between pages
+const path=require('path'); //adding for accessing path to fetch file
 
-const api=require('./server/routes/api');
+const api=require('./server/routes/api'); // a file that displays when the /path changes 
 
-const port =3000;
+const port =3000; / to run in that port
 //const router=express.Router();
 const app=express();
+//
 
 app.use(express.static(path.join(__dirname,'dist/vstorage')));
 
